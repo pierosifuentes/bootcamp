@@ -16,6 +16,10 @@ class HomeViewController: UIViewController {
         tableView.register(UINib(nibName: "CardCell", bundle: .main), forCellReuseIdentifier: "cellIdentifier")
     }
     
+    deinit {
+        print("this view was deinit")
+    }
+    
     @IBOutlet weak var tableView: UITableView!
     
     /*

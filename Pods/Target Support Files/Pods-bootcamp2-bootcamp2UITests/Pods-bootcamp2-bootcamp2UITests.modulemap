@@ -1,0 +1,6 @@
+framework module Pods_bootcamp2_bootcamp2UITests {
+  umbrella header "Pods-bootcamp2-bootcamp2UITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

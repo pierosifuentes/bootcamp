@@ -3,10 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C56DCF6C98D2F29843C616A /* Pods_bootcamp2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B55129FA64E0C5C51E99349C /* Pods_bootcamp2.framework */; };
+		1C7E19ADD225E9C598888BC8 /* Pods_bootcamp2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A0CFB7D58A4F835D9883AAA /* Pods_bootcamp2Tests.framework */; };
+		35190CC92620F89700EEA4DF /* RecoverPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35190CC82620F89700EEA4DF /* RecoverPassword.storyboard */; };
+		35190CCE2620F8B600EEA4DF /* RecoverPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35190CCD2620F8B600EEA4DF /* RecoverPasswordViewController.swift */; };
+		35190CE52621056600EEA4DF /* LoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35190CE42621056600EEA4DF /* LoginAPI.swift */; };
 		3529B76B261E57FB007CF04E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3529B76A261E57FB007CF04E /* AppDelegate.swift */; };
 		3529B76D261E57FB007CF04E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3529B76C261E57FB007CF04E /* SceneDelegate.swift */; };
 		3529B76F261E57FB007CF04E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3529B76E261E57FB007CF04E /* LoginViewController.swift */; };
@@ -20,10 +25,10 @@
 		352A8E7F261FAD80006394B3 /* BCPColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352A8E7E261FAD80006394B3 /* BCPColors.swift */; };
 		352A8E84261FAFA3006394B3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352A8E83261FAFA3006394B3 /* HomeViewController.swift */; };
 		352A8E89261FAFAC006394B3 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 352A8E88261FAFAC006394B3 /* Home.storyboard */; };
-		352A8E98261FB161006394B3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352A8E97261FB161006394B3 /* SettingsViewController.swift */; };
 		352A8E9E261FBF6B006394B3 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352A8E9C261FBF6B006394B3 /* CardCell.swift */; };
 		352A8E9F261FBF6B006394B3 /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 352A8E9D261FBF6B006394B3 /* CardCell.xib */; };
 		352A8EAB261FD28F006394B3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352A8EAA261FD28F006394B3 /* User.swift */; };
+		EC64B7A064452828354383A0 /* Pods_bootcamp2_bootcamp2UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 906EDF81944657F905B3F759 /* Pods_bootcamp2_bootcamp2UITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B8AC94BEA376EC3C00D7C36 /* Pods-bootcamp2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bootcamp2.release.xcconfig"; path = "Target Support Files/Pods-bootcamp2/Pods-bootcamp2.release.xcconfig"; sourceTree = "<group>"; };
+		35190CC82620F89700EEA4DF /* RecoverPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecoverPassword.storyboard; sourceTree = "<group>"; };
+		35190CCD2620F8B600EEA4DF /* RecoverPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordViewController.swift; sourceTree = "<group>"; };
+		35190CE42621056600EEA4DF /* LoginAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAPI.swift; sourceTree = "<group>"; };
 		3529B767261E57FB007CF04E /* bootcamp2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bootcamp2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3529B76A261E57FB007CF04E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3529B76C261E57FB007CF04E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,10 +73,17 @@
 		352A8E7E261FAD80006394B3 /* BCPColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCPColors.swift; sourceTree = "<group>"; };
 		352A8E83261FAFA3006394B3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		352A8E88261FAFAC006394B3 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
-		352A8E97261FB161006394B3 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		352A8E9C261FBF6B006394B3 /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
 		352A8E9D261FBF6B006394B3 /* CardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCell.xib; sourceTree = "<group>"; };
 		352A8EAA261FD28F006394B3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8A0CFB7D58A4F835D9883AAA /* Pods_bootcamp2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bootcamp2Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		906EDF81944657F905B3F759 /* Pods_bootcamp2_bootcamp2UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bootcamp2_bootcamp2UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6BFEDC0DAD8172104BE573E /* Pods-bootcamp2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bootcamp2.debug.xcconfig"; path = "Target Support Files/Pods-bootcamp2/Pods-bootcamp2.debug.xcconfig"; sourceTree = "<group>"; };
+		B55129FA64E0C5C51E99349C /* Pods_bootcamp2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bootcamp2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD756EAF46535B991AED80BD /* Pods-bootcamp2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bootcamp2Tests.release.xcconfig"; path = "Target Support Files/Pods-bootcamp2Tests/Pods-bootcamp2Tests.release.xcconfig"; sourceTree = "<group>"; };
+		E6DEB57C5B1D1E007CEC0A12 /* Pods-bootcamp2-bootcamp2UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bootcamp2-bootcamp2UITests.release.xcconfig"; path = "Target Support Files/Pods-bootcamp2-bootcamp2UITests/Pods-bootcamp2-bootcamp2UITests.release.xcconfig"; sourceTree = "<group>"; };
+		EF6541091B23C158FB455524 /* Pods-bootcamp2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bootcamp2Tests.debug.xcconfig"; path = "Target Support Files/Pods-bootcamp2Tests/Pods-bootcamp2Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		F6817EBE4FE68A65C971C6DB /* Pods-bootcamp2-bootcamp2UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bootcamp2-bootcamp2UITests.debug.xcconfig"; path = "Target Support Files/Pods-bootcamp2-bootcamp2UITests/Pods-bootcamp2-bootcamp2UITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C56DCF6C98D2F29843C616A /* Pods_bootcamp2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C7E19ADD225E9C598888BC8 /* Pods_bootcamp2Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,12 +107,69 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC64B7A064452828354383A0 /* Pods_bootcamp2_bootcamp2UITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E63B02CC9BCB9C978B1DC99 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A6BFEDC0DAD8172104BE573E /* Pods-bootcamp2.debug.xcconfig */,
+				2B8AC94BEA376EC3C00D7C36 /* Pods-bootcamp2.release.xcconfig */,
+				F6817EBE4FE68A65C971C6DB /* Pods-bootcamp2-bootcamp2UITests.debug.xcconfig */,
+				E6DEB57C5B1D1E007CEC0A12 /* Pods-bootcamp2-bootcamp2UITests.release.xcconfig */,
+				EF6541091B23C158FB455524 /* Pods-bootcamp2Tests.debug.xcconfig */,
+				BD756EAF46535B991AED80BD /* Pods-bootcamp2Tests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		35190CD9262102EF00EEA4DF /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				352A8E88261FAFAC006394B3 /* Home.storyboard */,
+				352A8E83261FAFA3006394B3 /* HomeViewController.swift */,
+				352A8E9C261FBF6B006394B3 /* CardCell.swift */,
+				352A8E9D261FBF6B006394B3 /* CardCell.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		35190CDA262102F700EEA4DF /* RecoverPassword */ = {
+			isa = PBXGroup;
+			children = (
+				35190CC82620F89700EEA4DF /* RecoverPassword.storyboard */,
+				35190CCD2620F8B600EEA4DF /* RecoverPasswordViewController.swift */,
+			);
+			path = RecoverPassword;
+			sourceTree = "<group>";
+		};
+		35190CDB2621030000EEA4DF /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Signup;
+			sourceTree = "<group>";
+		};
+		35190CDF2621047700EEA4DF /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				352A8E7E261FAD80006394B3 /* BCPColors.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		35190CE32621055700EEA4DF /* API */ = {
+			isa = PBXGroup;
+			children = (
+				35190CE42621056600EEA4DF /* LoginAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		3529B75E261E57FB007CF04E = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +177,8 @@
 				3529B780261E57FD007CF04E /* bootcamp2Tests */,
 				3529B78B261E57FD007CF04E /* bootcamp2UITests */,
 				3529B768261E57FB007CF04E /* Products */,
+				2E63B02CC9BCB9C978B1DC99 /* Pods */,
+				B65B8A9B1F6B929842BB5CE7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,19 +195,17 @@
 		3529B769261E57FB007CF04E /* bootcamp2 */ = {
 			isa = PBXGroup;
 			children = (
-				352A8EA3261FD142006394B3 /* Login */,
-				3529B76A261E57FB007CF04E /* AppDelegate.swift */,
-				3529B76C261E57FB007CF04E /* SceneDelegate.swift */,
-				352A8E97261FB161006394B3 /* SettingsViewController.swift */,
-				352A8E9C261FBF6B006394B3 /* CardCell.swift */,
-				352A8E9D261FBF6B006394B3 /* CardCell.xib */,
-				352A8E88261FAFAC006394B3 /* Home.storyboard */,
-				352A8E83261FAFA3006394B3 /* HomeViewController.swift */,
 				3529B773261E57FD007CF04E /* Assets.xcassets */,
 				3529B775261E57FD007CF04E /* LaunchScreen.storyboard */,
 				3529B778261E57FD007CF04E /* Info.plist */,
 				3529B79E261E5DC8007CF04E /* bootcamp2-Bridging-Header.h */,
-				352A8E7E261FAD80006394B3 /* BCPColors.swift */,
+				3529B76A261E57FB007CF04E /* AppDelegate.swift */,
+				3529B76C261E57FB007CF04E /* SceneDelegate.swift */,
+				35190CDF2621047700EEA4DF /* Common */,
+				352A8EA3261FD142006394B3 /* Login */,
+				35190CDB2621030000EEA4DF /* Signup */,
+				35190CDA262102F700EEA4DF /* RecoverPassword */,
+				35190CD9262102EF00EEA4DF /* Home */,
 			);
 			path = bootcamp2;
 			sourceTree = "<group>";
@@ -156,6 +231,7 @@
 		352A8EA3261FD142006394B3 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				35190CE32621055700EEA4DF /* API */,
 				352A8EA6261FD16C006394B3 /* Model */,
 				352A8EA5261FD164006394B3 /* Presenter */,
 				352A8EA4261FD15F006394B3 /* View */,
@@ -189,6 +265,16 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		B65B8A9B1F6B929842BB5CE7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B55129FA64E0C5C51E99349C /* Pods_bootcamp2.framework */,
+				906EDF81944657F905B3F759 /* Pods_bootcamp2_bootcamp2UITests.framework */,
+				8A0CFB7D58A4F835D9883AAA /* Pods_bootcamp2Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -196,9 +282,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3529B791261E57FD007CF04E /* Build configuration list for PBXNativeTarget "bootcamp2" */;
 			buildPhases = (
+				D7BE439AF4CDF020BE6029B7 /* [CP] Check Pods Manifest.lock */,
 				3529B763261E57FB007CF04E /* Sources */,
 				3529B764261E57FB007CF04E /* Frameworks */,
 				3529B765261E57FB007CF04E /* Resources */,
+				E58C678183C11C95CBC472EC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -213,6 +301,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3529B794261E57FD007CF04E /* Build configuration list for PBXNativeTarget "bootcamp2Tests" */;
 			buildPhases = (
+				AC852EFDE7AF08D5E517A76C /* [CP] Check Pods Manifest.lock */,
 				3529B779261E57FD007CF04E /* Sources */,
 				3529B77A261E57FD007CF04E /* Frameworks */,
 				3529B77B261E57FD007CF04E /* Resources */,
@@ -231,9 +320,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3529B797261E57FD007CF04E /* Build configuration list for PBXNativeTarget "bootcamp2UITests" */;
 			buildPhases = (
+				52A0B98C60D416128E9514B0 /* [CP] Check Pods Manifest.lock */,
 				3529B784261E57FD007CF04E /* Sources */,
 				3529B785261E57FD007CF04E /* Frameworks */,
 				3529B786261E57FD007CF04E /* Resources */,
+				15087E7F0F53D59CBFF32F12 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -293,6 +384,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35190CC92620F89700EEA4DF /* RecoverPassword.storyboard in Resources */,
 				3529B777261E57FD007CF04E /* LaunchScreen.storyboard in Resources */,
 				3529B774261E57FD007CF04E /* Assets.xcassets in Resources */,
 				352A8E9F261FBF6B006394B3 /* CardCell.xib in Resources */,
@@ -317,20 +409,124 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		15087E7F0F53D59CBFF32F12 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-bootcamp2-bootcamp2UITests/Pods-bootcamp2-bootcamp2UITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-bootcamp2-bootcamp2UITests/Pods-bootcamp2-bootcamp2UITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-bootcamp2-bootcamp2UITests/Pods-bootcamp2-bootcamp2UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		52A0B98C60D416128E9514B0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-bootcamp2-bootcamp2UITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC852EFDE7AF08D5E517A76C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-bootcamp2Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7BE439AF4CDF020BE6029B7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-bootcamp2-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E58C678183C11C95CBC472EC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-bootcamp2/Pods-bootcamp2-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-bootcamp2/Pods-bootcamp2-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-bootcamp2/Pods-bootcamp2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3529B763261E57FB007CF04E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				3529B7B1261E7D92007CF04E /* LoginModel.swift in Sources */,
+				35190CE52621056600EEA4DF /* LoginAPI.swift in Sources */,
 				3529B7A9261E7D16007CF04E /* LoginPresenter.swift in Sources */,
 				3529B76F261E57FB007CF04E /* LoginViewController.swift in Sources */,
 				352A8E7F261FAD80006394B3 /* BCPColors.swift in Sources */,
 				3529B76B261E57FB007CF04E /* AppDelegate.swift in Sources */,
 				352A8E84261FAFA3006394B3 /* HomeViewController.swift in Sources */,
 				3529B76D261E57FB007CF04E /* SceneDelegate.swift in Sources */,
-				352A8E98261FB161006394B3 /* SettingsViewController.swift in Sources */,
 				352A8EAB261FD28F006394B3 /* User.swift in Sources */,
+				35190CCE2620F8B600EEA4DF /* RecoverPasswordViewController.swift in Sources */,
 				352A8E9E261FBF6B006394B3 /* CardCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -504,6 +700,7 @@
 		};
 		3529B792261E57FD007CF04E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6BFEDC0DAD8172104BE573E /* Pods-bootcamp2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -525,6 +722,7 @@
 		};
 		3529B793261E57FD007CF04E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B8AC94BEA376EC3C00D7C36 /* Pods-bootcamp2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -545,6 +743,7 @@
 		};
 		3529B795261E57FD007CF04E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF6541091B23C158FB455524 /* Pods-bootcamp2Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -566,6 +765,7 @@
 		};
 		3529B796261E57FD007CF04E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD756EAF46535B991AED80BD /* Pods-bootcamp2Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -587,6 +787,7 @@
 		};
 		3529B798261E57FD007CF04E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6817EBE4FE68A65C971C6DB /* Pods-bootcamp2-bootcamp2UITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -606,6 +807,7 @@
 		};
 		3529B799261E57FD007CF04E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6DEB57C5B1D1E007CEC0A12 /* Pods-bootcamp2-bootcamp2UITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

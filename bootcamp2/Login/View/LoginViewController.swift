@@ -8,11 +8,11 @@
 import UIKit
 
 protocol LoginView: class {
-    
+    func showHome()
 }
 
 //View
-class LoginViewController: UIViewController, LoginView { //1
+class LoginViewController: UIViewController, LoginView {
     
     var presenter: LoginPresenter?
     
@@ -28,6 +28,11 @@ class LoginViewController: UIViewController, LoginView { //1
         presenter = LoginPresenter(view: self)
         setup()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = true
+    }
 
 
     func setup() {
@@ -41,6 +46,10 @@ class LoginViewController: UIViewController, LoginView { //1
     
     deinit {
         print("this view was deinit")
+    }
+    
+    func showHome() {
+        performSegue(withIdentifier: "loginSegue", sender: nil)
     }
     
     

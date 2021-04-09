@@ -5,6 +5,9 @@
 //  Created by Piero Sifuentes on 7/4/21.
 //
 
+//MVP
+//M <-> P <-> V
+
 import Foundation
 
 class LoginPresenter {
@@ -22,15 +25,8 @@ class LoginPresenter {
     }
     
     func onLoginTapped(username: String, password: String) {
-        //model.api.login(username, password) {
-//            coordinator.showHome
-        
-//            loginView.showError
-//       }
+        model.login(username: username, password: password) { _ in
+            
+        }
     }
 }
-
-//MVP
-
-//M <-> P <-> V
- 
