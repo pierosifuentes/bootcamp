@@ -7,9 +7,13 @@
 
 import UIKit
 
+protocol HomeView: class {
+    func reloadData()
+}
+
 class HomeViewController: UIViewController {
     
-    var users: [UserViewModel]?
+    var presenter: HomePresenter?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,16 +57,24 @@ extension HomeViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return users?.count ?? 0
+        return presenter?.users?.count ?? 0
     }
 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellIdentifier", for: indexPath) as? CardCell
-        let user = users?[indexPath.row]
-        cell?.setup(title: user?.fullName)
+        let user = presenter?.users?[indexPath.row]
+        cell?.setup(title: user?.fullname)
         return cell!
     }
     
     
+}
+
+
+extension HomeViewController: HomeView {
+    
+    func reloadData() {
+        tableView?.reloadData()
+    }
 }

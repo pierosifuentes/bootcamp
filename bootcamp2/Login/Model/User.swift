@@ -7,10 +7,29 @@
 
 import Foundation
 
-struct User {
-    var id: String
-    var name: String
-    var imagePath: String
+protocol User: UserViewModel {
+    var id: String { get }
+    var name: String { get }
+    var imagePath: String { get }
+    var lastName: String { get }
+    func validate() -> Bool
+}
+
+extension User {
+    
+    var fullname: String {
+        return name + " " + lastName
+    }
+    
+    func validate() -> Bool {
+        return id == "1"
+    }
+}
+
+struct UserImplementation: User {
+    let id: String
+    let name: String
+    let imagePath: String
     var lastName: String {
         return String(name.split(separator: " ").last ?? "NO LASTNAME")
     }
@@ -22,7 +41,7 @@ struct User {
     }
 }
 
-extension User: Decodable {
+extension UserImplementation: Decodable {
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)

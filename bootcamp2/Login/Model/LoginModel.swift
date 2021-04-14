@@ -17,23 +17,15 @@ class LoginModel {
     
     func login(username: String, password: String, completion: @escaping (_ response: Result<[UserViewModel]?, Error>?) -> Void) {
         //encrypt here
-        api.login(username: username, password: password) { [weak self] response in
+        api.login(username: username, password: password) { response in
             switch response {
             case .success(let users):
-                let newUsers = self?.makeUserViewModel(users: users)
-                completion(.success(newUsers))
+                BootcampSession.shared.appendUsers(users: users)
+                completion(.success(users))
             case .failure(let error):
                 completion(.failure(error))
             }
         }
-    }
-    
-    func makeUserViewModel(users: [User]) -> [UserViewModel] {
-        var newUsers: [UserViewModel] = []
-        users.forEach { user in
-            newUsers.append(UserViewModel(user: user))
-        }
-        return newUsers
     }
     
     

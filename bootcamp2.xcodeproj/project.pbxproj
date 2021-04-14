@@ -14,7 +14,9 @@
 		35190D4E2624F55B00EEA4DF /* RecoverPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35190D4C2624F55B00EEA4DF /* RecoverPasswordViewController.swift */; };
 		35190D4F2624F55B00EEA4DF /* RecoverPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35190D4D2624F55B00EEA4DF /* RecoverPasswordViewController.xib */; };
 		35190D542624F59900EEA4DF /* RecoverPasswordBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35190D532624F59900EEA4DF /* RecoverPasswordBuilder.swift */; };
-		35190D6A262505C000EEA4DF /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35190D69262505C000EEA4DF /* UserViewModel.swift */; };
+		35190EAA26279CDE00EEA4DF /* BootcampSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35190EA926279CDE00EEA4DF /* BootcampSession.swift */; };
+		35190EB92627A06C00EEA4DF /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35190EB82627A06C00EEA4DF /* HomePresenter.swift */; };
+		35190ECE2627AD0F00EEA4DF /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35190ECD2627AD0F00EEA4DF /* UserViewModel.swift */; };
 		3529B76B261E57FB007CF04E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3529B76A261E57FB007CF04E /* AppDelegate.swift */; };
 		3529B76D261E57FB007CF04E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3529B76C261E57FB007CF04E /* SceneDelegate.swift */; };
 		3529B76F261E57FB007CF04E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3529B76E261E57FB007CF04E /* LoginViewController.swift */; };
@@ -58,7 +60,9 @@
 		35190D4C2624F55B00EEA4DF /* RecoverPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordViewController.swift; sourceTree = "<group>"; };
 		35190D4D2624F55B00EEA4DF /* RecoverPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecoverPasswordViewController.xib; sourceTree = "<group>"; };
 		35190D532624F59900EEA4DF /* RecoverPasswordBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordBuilder.swift; sourceTree = "<group>"; };
-		35190D69262505C000EEA4DF /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		35190EA926279CDE00EEA4DF /* BootcampSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootcampSession.swift; sourceTree = "<group>"; };
+		35190EB82627A06C00EEA4DF /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		35190ECD2627AD0F00EEA4DF /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		3529B767261E57FB007CF04E /* bootcamp2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bootcamp2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3529B76A261E57FB007CF04E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3529B76C261E57FB007CF04E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -136,11 +140,9 @@
 		35190CD9262102EF00EEA4DF /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				35190D472624F46B00EEA4DF /* HomeViewBuilder.swift */,
-				352A8E88261FAFAC006394B3 /* Home.storyboard */,
-				352A8E83261FAFA3006394B3 /* HomeViewController.swift */,
-				352A8E9C261FBF6B006394B3 /* CardCell.swift */,
-				352A8E9D261FBF6B006394B3 /* CardCell.xib */,
+				35190EB72627A05D00EEA4DF /* View */,
+				35190EB62627A05800EEA4DF /* Presenter */,
+				35190EB52627A04900EEA4DF /* Model */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -148,9 +150,9 @@
 		35190CDA262102F700EEA4DF /* RecoverPassword */ = {
 			isa = PBXGroup;
 			children = (
+				35190D532624F59900EEA4DF /* RecoverPasswordBuilder.swift */,
 				35190D4C2624F55B00EEA4DF /* RecoverPasswordViewController.swift */,
 				35190D4D2624F55B00EEA4DF /* RecoverPasswordViewController.xib */,
-				35190D532624F59900EEA4DF /* RecoverPasswordBuilder.swift */,
 			);
 			path = RecoverPassword;
 			sourceTree = "<group>";
@@ -176,6 +178,49 @@
 				35190CE42621056600EEA4DF /* LoginAPI.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		35190EA726279CCA00EEA4DF /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				35190EA826279CD500EEA4DF /* Session */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		35190EA826279CD500EEA4DF /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				35190EA926279CDE00EEA4DF /* BootcampSession.swift */,
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
+		35190EB52627A04900EEA4DF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		35190EB62627A05800EEA4DF /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				35190EB82627A06C00EEA4DF /* HomePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		35190EB72627A05D00EEA4DF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				35190D472624F46B00EEA4DF /* HomeViewBuilder.swift */,
+				352A8E88261FAFAC006394B3 /* Home.storyboard */,
+				352A8E83261FAFA3006394B3 /* HomeViewController.swift */,
+				352A8E9C261FBF6B006394B3 /* CardCell.swift */,
+				352A8E9D261FBF6B006394B3 /* CardCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		3529B75E261E57FB007CF04E = {
@@ -210,6 +255,7 @@
 				3529B76A261E57FB007CF04E /* AppDelegate.swift */,
 				3529B76C261E57FB007CF04E /* SceneDelegate.swift */,
 				35190CDF2621047700EEA4DF /* Common */,
+				35190EA726279CCA00EEA4DF /* Infrastructure */,
 				352A8EA3261FD142006394B3 /* Login */,
 				35190CDB2621030000EEA4DF /* Signup */,
 				35190CDA262102F700EEA4DF /* RecoverPassword */,
@@ -252,7 +298,7 @@
 			children = (
 				3529B770261E57FB007CF04E /* Login.storyboard */,
 				3529B76E261E57FB007CF04E /* LoginViewController.swift */,
-				35190D69262505C000EEA4DF /* UserViewModel.swift */,
+				35190ECD2627AD0F00EEA4DF /* UserViewModel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -531,15 +577,17 @@
 				35190CE52621056600EEA4DF /* LoginAPI.swift in Sources */,
 				3529B7A9261E7D16007CF04E /* LoginPresenter.swift in Sources */,
 				3529B76F261E57FB007CF04E /* LoginViewController.swift in Sources */,
-				35190D6A262505C000EEA4DF /* UserViewModel.swift in Sources */,
+				35190EAA26279CDE00EEA4DF /* BootcampSession.swift in Sources */,
 				352A8E7F261FAD80006394B3 /* BCPColors.swift in Sources */,
 				35190D482624F46B00EEA4DF /* HomeViewBuilder.swift in Sources */,
 				35190D4E2624F55B00EEA4DF /* RecoverPasswordViewController.swift in Sources */,
+				35190ECE2627AD0F00EEA4DF /* UserViewModel.swift in Sources */,
 				3529B76B261E57FB007CF04E /* AppDelegate.swift in Sources */,
 				352A8E84261FAFA3006394B3 /* HomeViewController.swift in Sources */,
 				3529B76D261E57FB007CF04E /* SceneDelegate.swift in Sources */,
 				352A8EAB261FD28F006394B3 /* User.swift in Sources */,
 				352A8E9E261FBF6B006394B3 /* CardCell.swift in Sources */,
+				35190EB92627A06C00EEA4DF /* HomePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

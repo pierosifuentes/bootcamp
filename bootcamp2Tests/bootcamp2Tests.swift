@@ -9,25 +9,35 @@ import XCTest
 @testable import bootcamp2
 
 class bootcamp2Tests: XCTestCase {
+    
+    var sut: HomePresenter!
+    var view: CustomHomeView!
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        view = CustomHomeView()
+        sut = HomePresenter(view: view, users: [])
+        
     }
 
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+        
+    }
+    
+    func testReloadData() throws {
+        view.reloadData()
+        XCTAssertTrue(view.isReloadDataCalled)
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
+}
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+class CustomHomeView: HomeView {
+    
+    var isReloadDataCalled = false
+    
+    func reloadData() {
+        isReloadDataCalled = true
     }
-
+    
 }

@@ -12,7 +12,8 @@ class HomeViewBuilder {
     static func makeView(users: [UserViewModel]?) -> HomeViewController? {
         let storyboard = UIStoryboard(name: "Home", bundle: .main)
         let viewcontroller = storyboard.instantiateViewController(identifier: "HomeViewController") as? HomeViewController
-        viewcontroller?.users = users
+        viewcontroller?.presenter = HomePresenter(view: viewcontroller, users: users)
+        viewcontroller?.modalPresentationStyle = .fullScreen
         return viewcontroller
     }
 }
