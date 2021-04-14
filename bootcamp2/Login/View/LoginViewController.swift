@@ -8,19 +8,23 @@
 import UIKit
 
 protocol LoginView: class {
-    func showHome()
+    func showHome(users: [UserViewModel]?)
+    func showRecoverPassword()
+    func showLoader()
+    func hideLoader()
+    func showAlert(error: Error)
 }
 
 //View
-class LoginViewController: UIViewController, LoginView {
+class LoginViewController: UIViewController {
     
     var presenter: LoginPresenter?
     
-    @IBOutlet weak var usernameTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var topConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var usernameTextField: UITextField!
+    @IBOutlet private weak var passwordTextField: UITextField!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var loginButton: UIButton!
+    @IBOutlet private weak var topConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,23 +39,47 @@ class LoginViewController: UIViewController, LoginView {
     }
 
 
-    func setup() {
+    private func setup() {
         titleLabel?.textColor = .bcp
-        topConstraint.constant = 100
+        topConstraint?.constant = 100
     }
     
-    @IBAction func loginTapped(_ sender: UIButton) {
+    @IBAction private func loginTapped(_ sender: UIButton) {
         presenter?.onLoginTapped(username: usernameTextField?.text ?? "", password: passwordTextField?.text ?? "")
+    }
+    
+    @IBAction private func recoverPasswordTapped(_ sender: Any) {
+        showRecoverPassword()
     }
     
     deinit {
         print("this view was deinit")
     }
+}
+
+extension LoginViewController: LoginView {
     
-    func showHome() {
-        performSegue(withIdentifier: "loginSegue", sender: nil)
+    func showHome(users: [UserViewModel]?) {
+        guard let homeViewController = HomeViewBuilder.makeView(users: users) else { return }
+        present(homeViewController, animated: true, completion: nil)
     }
     
+    func showRecoverPassword() {
+        guard let recoverPasswordViewController = RecoverPasswordBuilder.makeView() else { return }
+        navigationController?.pushViewController(recoverPasswordViewController, animated: true)
+    }
+    
+    func showLoader() {
+        
+    }
+    
+    func hideLoader() {
+        
+    }
+    
+    func showAlert(error: Error) {
+        
+    }
     
 }
 

@@ -43,7 +43,7 @@
                                 <rect key="frame" x="144" y="403" width="126" height="30"/>
                                 <state key="normal" title="Recover password"/>
                                 <connections>
-                                    <segue destination="hJS-bo-azK" kind="show" id="bT9-Ij-obU"/>
+                                    <action selector="recoverPasswordTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3zt-Rf-vBv"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -71,32 +71,11 @@
                         <outlet property="titleLabel" destination="C6E-x2-hOa" id="HeM-rn-WFj"/>
                         <outlet property="topConstraint" destination="Gw7-RJ-QDR" id="ejL-X1-bSa"/>
                         <outlet property="usernameTextField" destination="ra8-zL-qEE" id="8qt-UV-0xC"/>
-                        <segue destination="nrc-wy-oo7" kind="presentation" identifier="loginSegue" id="xnK-mS-H5y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1623.1884057971015" y="115.84821428571428"/>
-        </scene>
-        <!--Home-->
-        <scene sceneID="1Pc-g0-KBv">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rsL-Al-QVe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewControllerPlaceholder storyboardName="Home" id="nrc-wy-oo7" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="MDK-LL-j0b"/>
-                </viewControllerPlaceholder>
-            </objects>
-            <point key="canvasLocation" x="2238" y="135"/>
-        </scene>
-        <!--RecoverPassword-->
-        <scene sceneID="vKQ-wp-5Bv">
-            <objects>
-                <viewControllerPlaceholder storyboardName="RecoverPassword" id="hJS-bo-azK" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="n32-ap-ueR"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mzP-dq-GAh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2229" y="99"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="etE-Wh-oqv">

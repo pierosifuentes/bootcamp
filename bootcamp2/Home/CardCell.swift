@@ -22,7 +22,7 @@ class CardCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setup(title: String) {
+    func setup(title: String?) {
         titleLabel?.text = title
     }
     

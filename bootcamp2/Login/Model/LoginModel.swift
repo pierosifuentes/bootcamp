@@ -15,15 +15,25 @@ class LoginModel {
         self.api = api
     }
     
-    func login(username: String, password: String, completion: @escaping (_ response: Any?) -> Void) {
+    func login(username: String, password: String, completion: @escaping (_ response: Result<[UserViewModel]?, Error>?) -> Void) {
         //encrypt here
-        api.login(username: username, password: password) { response in
-            if let user = response {
-                //
-            } else {
-                
+        api.login(username: username, password: password) { [weak self] response in
+            switch response {
+            case .success(let users):
+                let newUsers = self?.makeUserViewModel(users: users)
+                completion(.success(newUsers))
+            case .failure(let error):
+                completion(.failure(error))
             }
         }
+    }
+    
+    func makeUserViewModel(users: [User]) -> [UserViewModel] {
+        var newUsers: [UserViewModel] = []
+        users.forEach { user in
+            newUsers.append(UserViewModel(user: user))
+        }
+        return newUsers
     }
     
     

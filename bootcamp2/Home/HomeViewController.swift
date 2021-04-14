@@ -8,6 +8,8 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    
+    var users: [UserViewModel]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +33,7 @@ class HomeViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
 }
 
 extension HomeViewController: UITableViewDelegate {
@@ -50,13 +53,14 @@ extension HomeViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 100
+        return users?.count ?? 0
     }
 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellIdentifier", for: indexPath) as? CardCell
-        cell?.setup(title: "Card " + "\(indexPath.row)")
+        let user = users?[indexPath.row]
+        cell?.setup(title: user?.fullName)
         return cell!
     }
     

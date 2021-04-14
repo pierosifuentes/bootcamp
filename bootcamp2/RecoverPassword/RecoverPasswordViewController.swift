@@ -2,7 +2,7 @@
 //  RecoverPasswordViewController.swift
 //  bootcamp2
 //
-//  Created by Piero Sifuentes on 9/4/21.
+//  Created by Piero Sifuentes on 12/4/21.
 //
 
 import UIKit
@@ -14,4 +14,9 @@ class RecoverPasswordViewController: UIViewController {
         navigationController?.navigationBar.isHidden = false
     }
 
+
+   
+
 }
+
+

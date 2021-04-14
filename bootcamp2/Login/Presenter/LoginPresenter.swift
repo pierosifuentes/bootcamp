@@ -12,21 +12,26 @@ import Foundation
 
 class LoginPresenter {
     
-    var model: LoginModel
-    weak var view: LoginView?
+    private var model: LoginModel
+    private weak var view: LoginView?
     
     init(view: LoginView, model: LoginModel = LoginModel()) {
         self.view = view
         self.model = model
     }
     
-    func changePassword() {
-        
-    }
-    
     func onLoginTapped(username: String, password: String) {
-        model.login(username: username, password: password) { _ in
-            
+        view?.showLoader()
+        model.login(username: username, password: password) { [weak self] response in
+            self?.view?.hideLoader()
+            switch response {
+            case .success(let users):
+                self?.view?.showHome(users: users)
+            case .failure(let error):
+                self?.view?.showAlert(error: error)
+            case .none:
+                break
+            }
         }
     }
 }

@@ -19,17 +19,19 @@ class APIBuilder {
     }
 }
 
+
 class LoginAPI {
     
     //username: encrypted string
     //password: encrypted string
-    func login(username: String, password: String, completion: @escaping (_ response: [User]?) -> Void) {
+    func login(username: String, password: String, completion: @escaping (_ response: Result<[User], Error>) -> Void) {
         let request = APIBuilder.makeRequest(urlPath: "https://6070ced050aaea0017283f62.mockapi.io/bootcamp/login")
         request?.validate().responseDecodable(of: [User].self, completionHandler: { response in
-            if let value = response.value {
-                completion(value)
+            if let error = response.error {
+                completion(.failure(error))
             } else {
-                
+                let users = response.value ?? []
+                completion(.success(users))
             }
         })
     }
