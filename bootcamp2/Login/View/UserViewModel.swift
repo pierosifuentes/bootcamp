@@ -10,4 +10,5 @@ import Foundation
 protocol UserViewModel {
     var id: String { get }
     var fullname: String { get }
+    var imagePath: String { get }
 }

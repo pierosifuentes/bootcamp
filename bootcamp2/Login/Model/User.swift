@@ -10,7 +10,6 @@ import Foundation
 protocol User: UserViewModel {
     var id: String { get }
     var name: String { get }
-    var imagePath: String { get }
     var lastName: String { get }
     func validate() -> Bool
 }
@@ -26,7 +25,7 @@ extension User {
     }
 }
 
-struct UserImplementation: User {
+struct UserImplementation: User, Equatable {
     let id: String
     let name: String
     let imagePath: String
@@ -39,6 +38,10 @@ struct UserImplementation: User {
         case name
         case imagePath = "avatar"
     }
+    
+    static func == (lhs: Self, rhs: Self) -> Bool {
+        return lhs.id == rhs.id && lhs.name == rhs.name && lhs.lastName == rhs.lastName
+    }
 }
 
 extension UserImplementation: Decodable {
@@ -47,6 +50,6 @@ extension UserImplementation: Decodable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.id = try container.decodeIfPresent(String.self, forKey: .id) ?? "NO ID"
         self.name = try container.decodeIfPresent(String.self, forKey: .name) ?? "NO NAME"
-        self.imagePath = try container.decodeIfPresent(String.self, forKey: .imagePath) ?? "NO AVATAR"
+        self.imagePath = "https://pbs.twimg.com/profile_images/454466287071416320/01N38O_e_400x400.jpeg"
     }
 }

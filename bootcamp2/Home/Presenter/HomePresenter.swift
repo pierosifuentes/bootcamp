@@ -17,7 +17,13 @@ final class HomePresenter {
         self.users = users
     }
     
-    
+    func onUserSelectedAt(_ index: Int) {
+        guard let users = users, index < users.count, let user = users[index] as? User else {
+            return
+        }
+        view?.showUserProfile(user)
+        
+    }
 }
 
 

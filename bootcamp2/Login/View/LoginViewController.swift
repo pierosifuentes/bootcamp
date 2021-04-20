@@ -26,6 +26,8 @@ class LoginViewController: UIViewController {
     @IBOutlet private weak var loginButton: UIButton!
     @IBOutlet private weak var topConstraint: NSLayoutConstraint!
     
+    var activityIndicator: UIActivityIndicatorView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -42,6 +44,12 @@ class LoginViewController: UIViewController {
     private func setup() {
         titleLabel?.textColor = .bcp
         topConstraint?.constant = 100
+        activityIndicator = UIActivityIndicatorView(frame: CGRect(x: view.center.x, y: view.center.y, width: 40, height: 40))
+        activityIndicator?.style = .large
+        activityIndicator?.tintColor = .bcp
+        if let activityIndicator = activityIndicator {
+            view.addSubview(activityIndicator)
+        }
     }
     
     @IBAction private func loginTapped(_ sender: UIButton) {
@@ -70,11 +78,13 @@ extension LoginViewController: LoginView {
     }
     
     func showLoader() {
-        
+        activityIndicator?.startAnimating()
+        view.isUserInteractionEnabled = false
     }
     
     func hideLoader() {
-        
+        activityIndicator?.stopAnimating()
+        view.isUserInteractionEnabled = true
     }
     
     func showAlert(error: Error) {

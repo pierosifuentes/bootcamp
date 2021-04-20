@@ -9,6 +9,7 @@ import UIKit
 
 protocol HomeView: class {
     func reloadData()
+    func showUserProfile(_ user: User)
 }
 
 class HomeViewController: UIViewController {
@@ -20,6 +21,10 @@ class HomeViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "CardCell", bundle: .main), forCellReuseIdentifier: "cellIdentifier")
+        title = "Home"
+        let barButtonItem = UIBarButtonItem(title: "Add")
+        navigationController?.navigationItem.rightBarButtonItems?.append(barButtonItem)
+        navigationController?.navigationItem.largeTitleDisplayMode = .always
     }
     
     deinit {
@@ -43,7 +48,8 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        tableView.deselectRow(at: indexPath, animated: true)
+        presenter?.onUserSelectedAt(indexPath.row)
     }
     
     
@@ -64,7 +70,7 @@ extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellIdentifier", for: indexPath) as? CardCell
         let user = presenter?.users?[indexPath.row]
-        cell?.setup(title: user?.fullname)
+        cell?.setup(title: user?.fullname, imagePath: user?.imagePath)
         return cell!
     }
     
@@ -76,5 +82,10 @@ extension HomeViewController: HomeView {
     
     func reloadData() {
         tableView?.reloadData()
+    }
+    
+    func showUserProfile(_ user: User) {
+        guard let viewController = UserViewBuilder.makeView(user: user) else { return }
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }

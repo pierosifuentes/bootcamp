@@ -7,6 +7,7 @@ target 'bootcamp2' do
 
   # Pods for bootcamp2
   pod 'Alamofire', '~> 5.2'
+  pod 'SDWebImage', '~> 5.0'
 
   target 'bootcamp2Tests' do
     inherit! :search_paths

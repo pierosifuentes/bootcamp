@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import SDWebImage
 
-class CardCell: UITableViewCell {
+final class CardCell: UITableViewCell {
 
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var userImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,8 +24,13 @@ class CardCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setup(title: String?) {
+    func setup(title: String?, imagePath: String?) {
         titleLabel?.text = title
+        setupImage(title: title, imagePath: imagePath)
     }
     
+    func setupImage(title: String?, imagePath: String?) {
+        guard let imagePath = imagePath, let url = URL(string: imagePath) else { return }
+        userImageView?.sd_setImage(with: url)
+    }
 }
